@@ -6,7 +6,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "pico-placa":  "npx tsc && node dist/scripts/pico-placa.js"
+    "pico-placa":  "nest build && node dist/scripts/pico-placa.js"
   },
   "dependencies": {
     "@nestjs/common": "^7.0.0",
