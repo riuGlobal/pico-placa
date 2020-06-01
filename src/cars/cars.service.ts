@@ -41,8 +41,6 @@ export class CarsService {
     if (!iswithinTimeRestrictionInterval) {
       return false;
     } else {
-      console.log(date)
-      console.log(dayOfWeek)
       switch (dayOfWeek) {
         case 6:
         case 7:
