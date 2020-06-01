@@ -34,9 +34,9 @@ async function bootstrap() {
   const circulationLimited = await carsService.circulationLimitedInQuito(car, date, time);
 
   if (circulationLimited) {
-    console.log(`No, a car with licence plate : ${process.argv[2]} can not be on the road on ${process.argv[3]} at ${process.argv[4]}`)
+    console.log(`No, a car with license plate : ${process.argv[2]} can not be on the road on ${process.argv[3]} at ${process.argv[4]}`)
   } else {
-    console.log(`Yes, a car with licence plate : ${process.argv[2]} can be on the road on ${process.argv[3]} at ${process.argv[4]}`)
+    console.log(`Yes, a car with license plate : ${process.argv[2]} can be on the road on ${process.argv[3]} at ${process.argv[4]}`)
   }
 
   process.exit(0);

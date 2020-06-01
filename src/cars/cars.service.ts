@@ -3,14 +3,12 @@ import { Car } from '../cars/car.helper';
 import { TimeService } from '../time/time.service';
 import { Time } from '../time/time.helper'
 
-
 type Restrintion = {
   numbers: number[]
   day: number
 }
 @Injectable()
 export class CarsService {
-  
   restrictions: Restrintion[] = [
     {
       numbers: [1,2],
@@ -36,22 +34,18 @@ export class CarsService {
     private readonly timeService:TimeService
   ){}
 
- 
-
   async circulationLimitedInQuito(car:Car , date: Date, time: Time) {
     const lastDigitLicensePlate = parseInt(car.licensePlate.substr(car.licensePlate.length-1));
-    const dayOfWeek = date.getDay();
+    const dayOfWeek = date.getUTCDay();
     const iswithinTimeRestrictionInterval = await this.timeService.isWithinTimeRestrictionInterval(time);
-    
-   
     if (!iswithinTimeRestrictionInterval) {
       return false;
     } else {
       console.log(date)
       console.log(dayOfWeek)
       switch (dayOfWeek) {
-        case 0:
         case 6:
+        case 7:
           return false;
         case 1:
         case 2:
@@ -64,6 +58,4 @@ export class CarsService {
       }
     }
   }
-
-  
 }
