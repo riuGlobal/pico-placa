@@ -8,9 +8,9 @@ Simply set up the project (read below) and run
 
 ### Example
 
-``` $ npm run pico-placa PBW4307 2020-05-30 12:01```
+``` $ npm run pico-placa PBW4307 30/05/2020 12:01```
 
-$ Yes, a car with licence plate : PBW4307 can be on the road on 2020-05-30 at 12:01
+$ Yes, a car with licence plate : PBW4307 can be on the road on 30/05/2020 at 12:01
 
 ## Project Setup
 
