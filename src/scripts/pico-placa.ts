@@ -18,7 +18,7 @@ async function toValidDate(date: string): Promise<Date> {
   if (DateValidator.isValidDate(date, "YYYY-MM-DD")) {
     return new Date(date); 
   } else {
-    throw new Error('Invalid date. Valid date expected. Date should have valid format: dd-mm-yyyy');
+    throw new Error('Invalid date. Valid date expected. Date should have valid format: yyyy-mm-dd');
   }
 }
 
